@@ -1,0 +1,24 @@
+.dashboard { display: grid; gap: 22px; }
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.dashboard-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: 16px; }
+.card { padding: 22px; }
+.section-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; margin-bottom: 18px; }
+.section-head h2 { margin: 0; font-size: 16px; }
+.section-head p { margin: 5px 0 0; color: #8a93a5; font-size: 12px; }
+.activity-list { display: grid; }
+.activity-row { display: flex; align-items: center; gap: 12px; padding: 12px 0; border-bottom: 1px solid #eef1f5; }
+.activity-row:last-child { border-bottom: 0; }
+.activity-copy { flex: 1; min-width: 0; }
+.activity-copy strong, .activity-copy span { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.activity-copy strong { font-size: 13px; }
+.activity-copy span { margin-top: 2px; color: #8a93a5; font-size: 11px; }
+.activity-row time { flex: none; color: #9aa2b2; font-size: 11px; }
+.user-icon { width: 34px; height: 34px; display: grid; flex: none; place-items: center; border-radius: 10px; background: #eef0ff; color: #4f46e5; font-weight: 800; }
+.health-list { display: grid; gap: 18px; }
+.health-labels { display: flex; justify-content: space-between; gap: 12px; margin-bottom: 7px; }
+.health-labels span { color: #64748b; font-size: 12px; }
+.health-labels strong { font-size: 12px; }
+.progress { height: 7px; overflow: hidden; border-radius: 20px; background: #edf0f5; }
+.progress i { display: block; height: 100%; border-radius: 20px; background: #6366f1; }
+@media (max-width: 950px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } .dashboard-grid { grid-template-columns: 1fr; } }
+@media (max-width: 550px) { .stats-grid { grid-template-columns: 1fr; } .card { padding: 16px; } .section-head { align-items: flex-start; } }

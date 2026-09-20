@@ -1,0 +1,23 @@
+{
+  "name": "micro-frontend-dashboard",
+  "private": true,
+  "version": "1.1.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev -w host",
+    "dev:host": "npm run dev -w host",
+    "build": "npm run build -ws --if-present",
+    "build:host": "npm run build -w host",
+    "build:remotes": "npm run build -w auth && npm run build -w dashboard && npm run build -w users && npm run build -w analytics && npm run build -w notifications",
+    "start:local": "npm run build:remotes && concurrently --kill-others-on-fail \"npm run preview -w auth\" \"npm run preview -w dashboard\" \"npm run preview -w users\" \"npm run preview -w analytics\" \"npm run preview -w notifications\" \"npm run dev -w host\"",
+    "verify:architecture": "node scripts/verify-architecture.mjs",
+    "test": "npm run verify:architecture && npm run test:utils",
+    "test:utils": "node scripts/test-utils.mjs"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}

@@ -1,0 +1,20 @@
+.notifications-page { display: grid; gap: 18px; }
+.notifications-header { display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; }
+.notifications-header h2 { margin: 0; font-size: 18px; }
+.notifications-header p { margin: 5px 0 0; color: #8a93a5; font-size: 12px; }
+.notifications-card { padding: 5px 22px; }
+.notification { display: flex; align-items: flex-start; gap: 14px; padding: 18px 0; border-bottom: 1px solid #eef1f5; }
+.notification:last-child { border-bottom: 0; }
+.notification-dot { width: 9px; height: 9px; flex: none; margin-top: 7px; border-radius: 50%; background: #6366f1; }
+.notification.read .notification-dot { background: #d5d9e1; }
+.notification-copy { flex: 1; min-width: 0; }
+.notification-title { display: flex; align-items: center; gap: 8px; }
+.notification-title strong { font-size: 13px; }
+.notification-copy p { margin: 5px 0; color: #64748b; font-size: 12px; line-height: 1.5; }
+.notification-copy small { color: #9aa2b2; font-size: 10px; }
+.dismiss { border: 0; background: transparent; color: #94a3b8; font-size: 20px; cursor: pointer; }
+.communication-card { display: flex; gap: 12px; padding: 16px; border-radius: 12px; background: #eef0ff; color: #3730a3; }
+.communication-card > span { font-size: 22px; }
+.communication-card strong { font-size: 13px; }
+.communication-card p { margin: 4px 0 0; color: #5b5f8f; font-size: 11px; line-height: 1.5; }
+@media (max-width: 600px) { .notifications-header { align-items: stretch; flex-direction: column; } .notifications-header button { align-self: flex-start; } .notifications-card { padding: 5px 16px; } .communication-card { align-items: flex-start; } }
